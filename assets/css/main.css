@@ -3932,3 +3932,46 @@ input, select, textarea {
 			}
 
 		}
+
+
+
+/* image align center (I added myself) */
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+  }
+
+
+
+/* Sticky menu (I added myself) */
+
+#User_testing_menu {
+	overflow: hidden;
+	background-color: #f7f7f7;
+}
+
+#User_testing_menu a{
+	float: left;
+}
+
+.sticky {
+	Position: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
