@@ -67,30 +67,61 @@
 											<span class="image fit"><img src="images/CUBE_DG_ProjectAchievement.png" alt="" /></span> 
 										</div>
 								</div>
-								
+
+								<h2>Showcase - Overlay</h2>
+								<h3>Existing problem</h3>
+								<ol>
+									<li>We usually encounter issues on when to use popups, tooltips, dialogs, bottom sheets and other overlay components.</li>
+									<li>There is no clear definitions for those overlay related components.</li>
+									<li>There is no clear guidelines for overlay usage.</li>
+									<li>Inconsistent overlay behavior across different platforms, leading to confusion for field agents.</li>
+									<li>Lack of clear guidelines on when and how to use overlays effectively.</li>
+								</ol>
+
+								<h3>Research</h3>
+								<p>I did some research online for the definition of each overlay components.</p>
+								<span class="image fit"><img src="images/CUBE_DG_overlay_research.png" alt="" /></span> 
+
+								<h3>Summarize the definitions and usage guidelines</h3>
+								<p>Well defined all types of overlay components as table of content</p>
+								<span class="image fit"><img src="images/CUBE_DG_overlay.png" alt="" /></span> 
+								<p>I created the diagram of the relations for different overlay components, including the definition, usage guidelines, real cases and exceptional scenarios. 
+									So everytime when designers get confused about which overlay component to use, they can refer to the diagram and find the answer.
+								</p>
+								<span class="image fit"><img src="images/CUBE_DG_overlay_definition&examples.png" alt="" /></span> 
+
+
+								<h3>Setup design guidelines for different platforms or different scenarios</h3>
+								<h4>Tooltip</h4>
+								<span class="image fit"><img src="images/CUBE_DG_overlay_tooltip.png" alt="" /></span> 
+
+								<h4>Dialog / Modal</h4>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<p><i>Mobile</i></p>
+										<span class="image fit"><img src="images/CUBE_DG_overlay_dialog_mobile.png" alt="" /></span> 
+									</div>
+
+									<div class="col-6 col-12-medium">
+										<p><i>Tablet</i></p>
+										<span class="image fit"><img src="images/CUBE_DG_overlay_dialog_tablet.png" alt="" /></span> 
+									</div>
+								</div>	
+
+								<h4>Toast</h4>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<p><i>Mobile</i></p>
+										<span class="image fit"><img src="images/CUBE_DG_overlay_toast_mobile.png" alt="" /></span> 
+									</div>
+
+									<div class="col-6 col-12-medium">
+										<p><i>Tablet</i></p>
+										<span class="image fit"><img src="images/CUBE_DG_overlay_toast_tablet.png" alt="" /></span> 
+									</div>
+								</div>									
 						
 
-					<!-- View more button -->
-					<section>
-						<h3>To view more, please enter password</h3>
-						<form method="post" action="#" onsubmit="return validatePassword()">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<input type="password" name="demo-password" id="demo-password" placeholder="Enter password" />
-								</div>
-								<div class="col-4 col-12-medium">
-									<ul class="actions">
-										<li><input type="submit" value="Submit" class="primary" /></li>
-									</ul>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="button" value="Contact me for the password" class="button" onclick="window.location.href='mailto:lenkaxiashuxin@gmail.com'" /></li>
-							</ul>
-						</form>
-					</section>
-
-					<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
 
 
@@ -130,17 +161,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				function validatePassword() {
-					var pwd = document.getElementById('demo-password').value;
-					if (pwd !== 'lenka@fwd') {
-						alert('Incorrect password');
-						return false;
-					}
-					window.location.href = 'Project_13_FWD_DG_Full.html';
-					return false;
-				}
-			</script>
 
 
  	</body>
