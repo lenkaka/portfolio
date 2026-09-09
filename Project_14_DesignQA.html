@@ -36,8 +36,8 @@
 
 								<h2>Project Brief</h2>
 								<p>Design QA is the step where a designer checks a built screen against the design spec &mdash; and it is the step our process never had a proper home for.
-									Designers were jumping between the build on a phone, Figma on a laptop, a screenshot folder, and a spreadsheet of findings, then re-typing everything into JIRA.
-									<b>DespQA</b> is a self-initiated tool I designed and shipped to close that gap: a single workspace where a designer annotates a build screenshot, compares it side by side against the Figma frame, and exports the findings as a bug report.
+									Designers were moving screenshots off a device by email, rebuilding comparison artboards in Figma by hand, and marking every defect one by one before it became a JIRA comment.
+									<b>DespQA</b> is a self-initiated tool I designed and shipped to close that gap: a single workspace where a designer captures a build screen, compares it against the Figma frame, and exports the findings as a report.
 								</p>
 
 								<ul class="actions">
@@ -46,62 +46,177 @@
 
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
+								<h3>Target Users</h3>
+								<p>Three roles use the tool as it stands today. Designers work across several country versions of the same app, so the same QA pass repeats on different builds and devices.</p>
+
+								<!-- How an issue travels between the three roles -->
+								<div style="text-align: center; margin: 2.5em 0 2em 0; line-height: 1.3;">
+									<span style="font-size: 2.75rem;">&#129489;&#8205;&#127912;</span>
+									<span style="font-size: 1.5rem; opacity: 0.35; margin: 0 0.5em;">&rarr;</span>
+									<span style="font-size: 2.75rem;">&#128027;</span>
+									<span style="font-size: 1.5rem; opacity: 0.35; margin: 0 0.5em;">&rarr;</span>
+									<span style="font-size: 2.75rem;">&#129489;&#8205;&#128187;</span>
+									<br />
+									<span style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.5;">designer logs &nbsp;&rarr;&nbsp; issue &nbsp;&rarr;&nbsp; developer fixes</span>
+								</div>
+
 								<div class="row">
 									<div class="col-4 col-12-medium">
-										<h3>Target Users</h3>
-										<p>Product designers running QA on mobile builds, and the developers who receive the findings.</p>
+										<div style="font-size: 3rem; line-height: 1.2;">&#129489;&#8205;&#127912;</div>
+										<h6>Runs the pass</h6>
+										<h4>Product Designer</h4>
+										<p>Captures the build, compares it against the Figma frame, and logs the issues.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div style="font-size: 3rem; line-height: 1.2;">&#129489;&#8205;&#128187;</div>
+										<h6>Receives the issues</h6>
+										<h4>Developer</h4>
+										<p>Opens the review link, sees the matching frame, and flips status as fixes land.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div style="font-size: 3rem; line-height: 1.2;">&#129489;&#8205;&#128300;</div>
+										<h6>Assists the review</h6>
+										<h4>Functional QA</h4>
+										<p>Already testing the build, so they help review design issues alongside their own functional pass.</p>
+									</div>
+								</div>
 
+								<!-- Fourth role, planned -->
+								<div style="border-left: 3px solid #b74e91; padding: 0.25em 0 0.25em 1.25em; margin: 1em 0 0 0;">
+									<h6>Planned &mdash; the final app</h6>
+									<p style="margin-bottom: 0;">
+										<span style="font-size: 1.6rem; vertical-align: -0.25em; margin-right: 0.4em;">&#129489;&#8205;&#128188;</span>
+										A <b>Design Lead</b> reviewing the app overall rather than screen by screen &mdash; which is what the planned cross-frame AI check and countable defect data are groundwork for.
+									</p>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+
+								<div class="row">
+									<div class="col-4 col-12-medium">
 										<h3>My Role</h3>
 										<ul>
-											<li>Problem framing &amp; process research</li>
-											<li>Product owner</li>
-											<li>Product designer</li>
-											<li>Built and shipped the tool</li>
+											<li>Product Designer</li>
+											<li>Researcher</li>
+											<li>Product owner &amp; builder</li>
 										</ul>
 
 										<h3>Main Activities</h3>
 										<ul>
-											<li>Mapped the existing design QA workflow to locate the breakpoints</li>
-											<li>Designed the session, annotation and comparison flows</li>
-											<li>Built the web app and the companion Figma plugin</li>
-											<li>Ran it on live sprint QA and iterated on feedback</li>
+											<li>Journey mapping &amp; process research</li>
+											<li>Prototyping &amp; design mockups</li>
+											<li>Built the web app &amp; Figma plugin</li>
+											<li>Scoped the roadmap from the journey-map findings</li>
 										</ul>
 									</div>
 
 									<div class="col-8 col-12-medium">
-										<h3>The Problem</h3>
-										<p>I mapped our end-to-end design process and found that it effectively <em>stopped at handoff</em>. After a design was handed to engineering there was no owned, repeatable step for verifying what actually got built. In practice that meant:</p>
+										<h3>Project Achievements</h3>
+
+										<h4>Phase 1 &mdash; Shipped</h4>
+										<ul>
+											<li><b>Figma plugin sync</b> &mdash; push frames straight from Figma into a session code</li>
+											<li><b>Web dashboard &amp; session management</b> &mdash; each pass records environment, build version and device</li>
+											<li><b>Persistent storage</b> &mdash; sessions, issues and screenshots persist server-side (Supabase, deployed on Netlify)</li>
+											<li><b>Cross-device sessions</b> &mdash; the same session code opens on desktop, tablet and phone</li>
+											<li><b>Device pairing &amp; mobile capture</b> &mdash; pair a phone or tablet and push screenshots straight into the workspace</li>
+											<li><b>Dev review mode</b> &mdash; read-only link; developers browse issues, see the matching Figma frame, and flip status</li>
+											<li><b>Export</b> &mdash; JIRA-style PDF report and JSON export</li>
+											<li><b>AI visual diff</b> &mdash; one-click check compares the screenshot against the selected Figma frame, then auto-logs issues with severity, category and on-canvas markers</li>
+										</ul>
+
+										<h4>Phase 2 &mdash; Next</h4>
+										<ul>
+											<li><b>Jira integration</b> &mdash; push logged issues straight into a ticket instead of exporting a PDF</li>
+											<li><b>AI check across frames</b> &mdash; run the diff over a whole flow at once, not one frame at a time</li>
+											<li><b>Screenshots in object storage</b> &mdash; lift size limits and cut bandwidth</li>
+										</ul>
+
+										<h4>Phase 3 &mdash; Vision</h4>
+										<ul>
+											<li><b>In-app floating QA toolbar</b> &mdash; log issues from inside the running app with no screenshot round-trip. Currently on hold: the dev team considers native SDK integration too costly for now, so the screenshot workflow is the practical path until that changes.</li>
+										</ul>
+									</div>
+								</div>
+
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h2>The Problem</h2>
+								<p>I mapped our end-to-end design process and found that it effectively <em>stopped at handoff</em>. After a design was handed to engineering there was no owned, repeatable step for verifying what actually got built. In practice that meant:</p>
+								<div class="row">
+									<div class="col-6 col-12-medium">
 										<ul>
 											<li><b>Tool switching</b> &mdash; a single finding touched four different apps before it became a ticket.</li>
 											<li><b>No shared reference</b> &mdash; "it doesn't match the design" without the frame beside it is not actionable for a developer.</li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<ul>
 											<li><b>Findings evaporated</b> &mdash; notes lived in personal screenshots and DMs, so the same defect resurfaced in the next sprint.</li>
 											<li><b>Nothing was measurable</b> &mdash; we could not say how many design defects a release carried, so QA never got prioritised.</li>
-										</ul>
-
-										<h3>The Solution</h3>
-										<p>One workspace that holds the whole QA pass, so a finding never has to leave the tool before it becomes a ticket.</p>
-										<ul>
-											<li><b>Screenshot annotation</b> &mdash; mark up a build screenshot directly in the browser.</li>
-											<li><b>Side-by-side Figma comparison</b> &mdash; the design frame sits next to the build, so every finding carries its own evidence.</li>
-											<li><b>Figma plugin</b> &mdash; pushes frames straight into a session. No access token, no file permissions, no setup for the designer.</li>
-											<li><b>Sessions</b> &mdash; each pass records environment, build version and device, so findings stay traceable to a specific build.</li>
-											<li><b>Shared sessions</b> &mdash; a teammate joins an existing session instead of starting a parallel, divergent list.</li>
-											<li><b>Bug report export</b> &mdash; findings leave as a structured report, with JIRA ticket population planned next.</li>
 										</ul>
 									</div>
 								</div>
 
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
-								<h3>Key Design Decisions</h3>
+								<h2>Journey Map - The Existing QA Process</h2>
+								<p>I mapped the current process with the designers who actually run it, across five stages &mdash; tracking what they do, how they feel, and where it hurts.</p>
+								<span class="image fit"><img src="images/DesignQA_JourneyMap.png" alt="Five-stage journey map of the existing design QA process, showing user actions, emotions and pain points" /></span>
+
+								<h3>What the map showed</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h4>The low point is recording, not checking</h4>
+										<p>Comparing the build against Figma (Stage 2) is fine &mdash; sentiment stays flat. It collapses at Stage 3&ndash;4, where the designer moves screenshots to a laptop, rebuilds a comparison artboard in Figma by hand, and marks every defect individually.</p>
+
+										<h4>IT security made file transfer a bottleneck</h4>
+										<p>AirDrop is blocked, so every screenshot travels by Teams, email, Slack or a third-party transfer app before the real work can even begin.</p>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h4>Effort scales with the defect count</h4>
+										<p>"It takes time for marking all the defects if it is too many." A worse build costs disproportionately more of the designer's time &mdash; exactly when there is least of it.</p>
+
+										<h4>Verification means re-running everything</h4>
+										<p>Stage 5 loops back to Stage 1, so confirming a single fix repeats the whole setup: find the ticket, scan the QR code, download the latest build.</p>
+									</div>
+								</div>
+								<p>That located the intervention precisely. The tool does not try to improve how designers <em>look</em> at a build &mdash; that part already works. It removes stages 3 and 4.</p>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h2>The Solution</h2>
+								<p>One workspace that holds the whole QA pass, so a finding never has to leave the tool before it becomes a ticket. Each capability maps to a stage the journey map flagged.</p>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<ul>
+											<li><b>Device pairing &amp; mobile capture</b> &mdash; pair a phone, push screenshots straight in. Removes the email-yourself-a-screenshot step entirely.</li>
+											<li><b>Figma plugin</b> &mdash; pushes frames into a session. No access token, no file permissions, no manual artboard assembly.</li>
+											<li><b>Side-by-side comparison</b> &mdash; the design frame sits next to the build, so every finding carries its own evidence.</li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<ul>
+											<li><b>AI visual diff</b> &mdash; one click compares screenshot against Figma frame and auto-logs issues with severity and on-canvas markers, so effort stops scaling with defect count.</li>
+											<li><b>Dev review mode</b> &mdash; developers open a read-only link, see the matching frame, and flip status. No screenshot round-trip through JIRA comments.</li>
+											<li><b>Sessions &amp; export</b> &mdash; findings stay traceable to a specific build, and leave as a structured report.</li>
+										</ul>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h2>Key Design Decisions</h2>
 								<div class="row">
 									<div class="col-4 col-12-medium">
 										<h4>No auth token for the designer</h4>
 										<p>The obvious build was a Figma REST integration, which would have made every designer generate and paste an access token. Pushing frames <em>out</em> from a Figma plugin instead removed that step entirely &mdash; the difference between a tool people try once and a tool people keep open.</p>
 									</div>
 									<div class="col-4 col-12-medium">
-										<h4>Screenshots before video</h4>
-										<p>I scoped the first release to still screenshots rather than screen recordings. Recording is the richer input, but it carries frame extraction, playback and timestamp binding. Screenshots let me validate the actual workflow first and keep engineering effort proportional to a self-initiated project.</p>
+										<h4>Screenshots before an in-app SDK</h4>
+										<p>The end goal is a floating toolbar inside the running app, with no screenshot at all. The dev team judged native SDK integration too costly for now, so I shipped the screenshot workflow instead of waiting &mdash; it addresses the same journey-map stages and works today.</p>
 									</div>
 									<div class="col-4 col-12-medium">
 										<h4>Session as the unit of work</h4>
@@ -111,8 +226,9 @@
 
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
-								<h3>Outcome</h3>
-								<p>DespQA is live and in use on real sprint QA passes. It gives the design process an owned step after handoff &mdash; the gap I originally set out to close &mdash; and it makes design defects countable for the first time, which is the groundwork for arguing that design QA deserves sprint time at all.</p>
+								<h2>Outcome</h2>
+								<p>DespQA is built and deployed, and the full flow works end to end &mdash; push frames from Figma, capture the build from a paired device, run the AI diff, log the issues, export the report. It is now being introduced to the team, so the next milestone is adoption rather than features.</p>
+								<p>What it sets up matters more to me than the feature list. The design process gains an owned step after handoff &mdash; the gap I set out to close. And because findings are grouped into sessions tied to a specific build, <b>design defects become countable for the first time</b>. That is the number I want next: once a release's design-defect count is visible, design QA can be argued for on evidence instead of instinct.</p>
 
 							</section>
 
