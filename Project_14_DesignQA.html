@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Projects - DespQA Design QA Tool - Lenka Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Lenka Design</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="Projects.html" class="active">Project</a></li>
+						<li><a href="About.html">About</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">DespQA - A Design QA Tool</h1>
+
+							<section>
+								<span class="image fit"><img src="images/DesignQA_cover.png" alt="" /></span>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h2>Project Brief</h2>
+								<p>Design QA is the step where a designer checks a built screen against the design spec &mdash; and it is the step our process never had a proper home for.
+									Designers were jumping between the build on a phone, Figma on a laptop, a screenshot folder, and a spreadsheet of findings, then re-typing everything into JIRA.
+									<b>DespQA</b> is a self-initiated tool I designed and shipped to close that gap: a single workspace where a designer annotates a build screenshot, compares it side by side against the Figma frame, and exports the findings as a bug report.
+								</p>
+
+								<ul class="actions">
+									<li><a href="https://despqa.netlify.app" target="_blank" class="button primary">View Live Tool</a></li>
+								</ul>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<div class="row">
+									<div class="col-4 col-12-medium">
+										<h3>Target Users</h3>
+										<p>Product designers running QA on mobile builds, and the developers who receive the findings.</p>
+
+										<h3>My Role</h3>
+										<ul>
+											<li>Problem framing &amp; process research</li>
+											<li>Product owner</li>
+											<li>Product designer</li>
+											<li>Built and shipped the tool</li>
+										</ul>
+
+										<h3>Main Activities</h3>
+										<ul>
+											<li>Mapped the existing design QA workflow to locate the breakpoints</li>
+											<li>Designed the session, annotation and comparison flows</li>
+											<li>Built the web app and the companion Figma plugin</li>
+											<li>Ran it on live sprint QA and iterated on feedback</li>
+										</ul>
+									</div>
+
+									<div class="col-8 col-12-medium">
+										<h3>The Problem</h3>
+										<p>I mapped our end-to-end design process and found that it effectively <em>stopped at handoff</em>. After a design was handed to engineering there was no owned, repeatable step for verifying what actually got built. In practice that meant:</p>
+										<ul>
+											<li><b>Tool switching</b> &mdash; a single finding touched four different apps before it became a ticket.</li>
+											<li><b>No shared reference</b> &mdash; "it doesn't match the design" without the frame beside it is not actionable for a developer.</li>
+											<li><b>Findings evaporated</b> &mdash; notes lived in personal screenshots and DMs, so the same defect resurfaced in the next sprint.</li>
+											<li><b>Nothing was measurable</b> &mdash; we could not say how many design defects a release carried, so QA never got prioritised.</li>
+										</ul>
+
+										<h3>The Solution</h3>
+										<p>One workspace that holds the whole QA pass, so a finding never has to leave the tool before it becomes a ticket.</p>
+										<ul>
+											<li><b>Screenshot annotation</b> &mdash; mark up a build screenshot directly in the browser.</li>
+											<li><b>Side-by-side Figma comparison</b> &mdash; the design frame sits next to the build, so every finding carries its own evidence.</li>
+											<li><b>Figma plugin</b> &mdash; pushes frames straight into a session. No access token, no file permissions, no setup for the designer.</li>
+											<li><b>Sessions</b> &mdash; each pass records environment, build version and device, so findings stay traceable to a specific build.</li>
+											<li><b>Shared sessions</b> &mdash; a teammate joins an existing session instead of starting a parallel, divergent list.</li>
+											<li><b>Bug report export</b> &mdash; findings leave as a structured report, with JIRA ticket population planned next.</li>
+										</ul>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Key Design Decisions</h3>
+								<div class="row">
+									<div class="col-4 col-12-medium">
+										<h4>No auth token for the designer</h4>
+										<p>The obvious build was a Figma REST integration, which would have made every designer generate and paste an access token. Pushing frames <em>out</em> from a Figma plugin instead removed that step entirely &mdash; the difference between a tool people try once and a tool people keep open.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<h4>Screenshots before video</h4>
+										<p>I scoped the first release to still screenshots rather than screen recordings. Recording is the richer input, but it carries frame extraction, playback and timestamp binding. Screenshots let me validate the actual workflow first and keep engineering effort proportional to a self-initiated project.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<h4>Session as the unit of work</h4>
+										<p>Findings are grouped into a session tied to a build, not filed as loose comments. That is what makes a QA pass reviewable after the fact, and what turns scattered observations into something a team can count and act on.</p>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Outcome</h3>
+								<p>DespQA is live and in use on real sprint QA passes. It gives the design process an owned step after handoff &mdash; the gap I originally set out to close &mdash; and it makes design defects countable for the first time, which is the groundwork for arguing that design QA deserves sprint time at all.</p>
+
+							</section>
+
+							<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+							<!-- Separator -->
+							<div class="align-center" style="margin: 2em 0 1em 0;">
+								<hr />
+							</div>
+
+							<ul class="actions">
+								<li><a href="Projects.html" class="button primary">View My Projects</a></li>
+								<li><a href="https://despqa.netlify.app" target="_blank" class="button">Try DespQA</a></li>
+							</ul>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Lenka XIA 2022. All rights reserved.</li>
+						<ul class="icons">
+							<li><a href="https://www.behance.net/lenkaxiashuxin" target="_blank" class="icon brands fa-behance-square"><span class="label">Behance</span></a></li>
+							<li><a href="https://www.linkedin.com/in/lenkaxia/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+ 	</body>
+</html>
