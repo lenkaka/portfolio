@@ -39,6 +39,7 @@
 									Designers were moving screenshots off a device by email, rebuilding comparison artboards in Figma by hand, and marking every defect one by one before it became a JIRA comment.
 									<b>DespQA</b> is a self-initiated tool I designed and shipped to close that gap: a single workspace where a designer captures a build screen, compares it against the Figma frame, and exports the findings as a report.
 								</p>
+								<p>It is an <b>MVP I built on my own</b> to prove the workflow is worth engineering time. The end goal &mdash; logging issues from inside the running app &mdash; needs the dev team, and is currently out of reach on cost. So I built the version that works today.</p>
 
 								<ul class="actions">
 									<li><a href="https://despqa.netlify.app" target="_blank" class="button primary">View Live Tool</a></li>
@@ -208,20 +209,21 @@
 
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
-								<h2>Key Design Decisions</h2>
+								<h2>Scope &amp; Constraints</h2>
+								<p>Being clear about what this is: a working MVP, not a production system, built by one designer to make the case for the real thing.</p>
 								<div class="row">
-									<div class="col-4 col-12-medium">
-										<h4>No auth token for the designer</h4>
-										<p>The obvious build was a Figma REST integration, which would have made every designer generate and paste an access token. Pushing frames <em>out</em> from a Figma plugin instead removed that step entirely &mdash; the difference between a tool people try once and a tool people keep open.</p>
+									<div class="col-6 col-12-medium">
+										<h4>What I built alone</h4>
+										<p>The web app, the Figma plugin, device pairing, the AI diff and the export &mdash; enough for a designer to run a complete QA pass today without engineering support. Shipping it myself meant the idea could be judged on a working tool instead of a pitch deck.</p>
 									</div>
-									<div class="col-4 col-12-medium">
-										<h4>Screenshots before an in-app SDK</h4>
-										<p>The end goal is a floating toolbar inside the running app, with no screenshot at all. The dev team judged native SDK integration too costly for now, so I shipped the screenshot workflow instead of waiting &mdash; it addresses the same journey-map stages and works today.</p>
+									<div class="col-6 col-12-medium">
+										<h4>What needs the dev team</h4>
+										<p>The end goal is a floating QA toolbar inside the running app, so issues are logged in place with no screenshot at all. That needs a React Native SDK integrated into the product itself &mdash; which the dev team currently considers too costly to take on.</p>
 									</div>
-									<div class="col-4 col-12-medium">
-										<h4>Session as the unit of work</h4>
-										<p>Findings are grouped into a session tied to a build, not filed as loose comments. That is what makes a QA pass reviewable after the fact, and what turns scattered observations into something a team can count and act on.</p>
-									</div>
+								</div>
+								<div style="border-left: 3px solid #b74e91; padding: 0.25em 0 0.25em 1.25em; margin: 1em 0 0 0;">
+									<h6>The trade-off</h6>
+									<p style="margin-bottom: 0;">Rather than wait for that constraint to lift, I scoped an MVP that attacks the same journey-map stages by a route I could build without them. It is a deliberately smaller answer to the same problem &mdash; and if it earns adoption, it becomes the evidence that the larger one is worth funding.</p>
 								</div>
 
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
