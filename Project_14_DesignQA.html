@@ -145,18 +145,25 @@
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
 								<h2>The Problem</h2>
-								<p>I mapped our end-to-end design process and found that it effectively <em>stopped at handoff</em>. After a design was handed to engineering there was no owned, repeatable step for verifying what actually got built. In practice that meant:</p>
+								<p>I mapped our end-to-end design process and found that it effectively <em>stopped at handoff</em>. After a design was handed to engineering there was no owned, repeatable step for verifying what actually got built &mdash; so every QA pass was run by hand, start to finish.</p>
+
+								<div style="border-left: 3px solid #b74e91; padding: 0.25em 0 0.25em 1.25em; margin: 1.25em 0;">
+									<h6>A daily pass, end to end</h6>
+									<p style="margin-bottom: 0; opacity: 0.8;">Set up devices &rarr; scan QR &rarr; download build &rarr; open Figma &rarr; compare screens by eye &rarr; screenshot the issue &rarr; send it to myself over work chat &rarr; drag into a Figma artboard &rarr; annotate &rarr; screenshot <em>that</em> &rarr; paste into a ticket &rarr; wait for dev &rarr; repeat.</p>
+								</div>
+
+								<p>The worst parts were never about design skill. They were pure logistics:</p>
 								<div class="row">
 									<div class="col-6 col-12-medium">
 										<ul>
-											<li><b>Tool switching</b> &mdash; a single finding touched four different apps before it became a ticket.</li>
-											<li><b>No shared reference</b> &mdash; "it doesn't match the design" without the frame beside it is not actionable for a developer.</li>
+											<li><b>File transfer was blocked</b> &mdash; AirDrop is off by company policy, so every screenshot travelled through work chat or email before the real work could start.</li>
+											<li><b>Finding the build was a hunt</b> &mdash; locate the ticket, scan the QR, download the right version, and do it again for the next device.</li>
 										</ul>
 									</div>
 									<div class="col-6 col-12-medium">
 										<ul>
-											<li><b>Findings evaporated</b> &mdash; notes lived in personal screenshots and DMs, so the same defect resurfaced in the next sprint.</li>
-											<li><b>Nothing was measurable</b> &mdash; we could not say how many design defects a release carried, so QA never got prioritised.</li>
+											<li><b>Annotating happened twice</b> &mdash; mark the defect up in Figma, then screenshot the markup to paste into a ticket. Absurd for a one-line finding.</li>
+											<li><b>Nothing stayed tracked</b> &mdash; with 20 issues open there was no way to tell what was fixed, so defects resurfaced and were never countable.</li>
 										</ul>
 									</div>
 								</div>
