@@ -215,6 +215,93 @@
 
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
+								<h2>Inside the Tool</h2>
+								<p>The whole pass, screen by screen &mdash; from starting a session to the exported report.</p>
+
+								<h3>Starting a pass</h3>
+								<div class="row">
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_1_StartSession.png" alt="DespQA home page with the Start New Session form" /></span>
+										<h4>Start a session</h4>
+										<p>The designer records what the pass is about: Figma file URL, environment, build version, device type and model, and the JIRA ticket. Every finding that follows is tied to that specific build.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_2_JoinSession.png" alt="Join Session tab with options to join as co-creator or reviewer" /></span>
+										<h4>Join a session</h4>
+										<p>A second tab for everyone else. A session code or review link gets a developer in as <b>Reviewer</b>, or another designer in as <b>Co-Creator</b> with full edit access.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_3_Guide.png" alt="Built-in user guide page with the five-step flow and plugin download" /></span>
+										<h4>Learn it without me</h4>
+										<p>The Figma plugin ships as a zip download with load instructions, and the five-step flow is documented in the tool &mdash; so adopting it does not depend on me walking someone through it.</p>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>The workspace</h3>
+								<div class="row">
+									<div class="col-8 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_4_Workspace.png" alt="Annotated view of the DespQA workspace showing session code, upload, add issue, pair device, share and export controls" /></span>
+									</div>
+									<div class="col-4 col-12-medium">
+										<p>One screen holds the whole pass. The <b>session code</b> pushes frames in from Figma and pulls collaborators in. <b>Upload</b> and <b>Pair device</b> bring the build screens in. <b>Add issue</b> logs a finding once it is annotated. <b>Share</b> hands the session to a developer, and <b>Export</b> produces the report.</p>
+										<p>Nothing on this screen requires leaving for another app &mdash; which was the whole point.</p>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Getting the design in</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_5_FigmaPlugin.png" alt="The Design QA Figma plugin with session code entered and frames selected for export" /></span>
+										<h4>The Figma plugin</h4>
+										<p>Paste the session code, search and tick the frames, export. No access token and no file permissions, because the push happens from inside Figma.</p>
+									</div>
+									<div class="col-6 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_6_Imported.png" alt="Workspace with imported Figma frames listed in the Frames tab" /></span>
+										<h4>Frames land in the session</h4>
+										<p>The selected frames appear in the Frames tab, ready to sit beside the build screen. This is the artboard assembly that used to be done by hand.</p>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Getting the build in</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_7_PairDevice.png" alt="Pair Device QR code dialog beside the paired phone showing screenshots sent to the workspace" /></span>
+									</div>
+									<div class="col-6 col-12-medium">
+										<p>Two ways in, and neither goes through chat or email. <b>Upload</b> takes a file from the desktop. <b>Pair device</b> shows a QR code that opens a capture page on the phone, and every screenshot taken there lands in the workspace within seconds.</p>
+										<p>This is the step that replaced the blocked AirDrop &mdash; the pain point the original journey map flagged hardest.</p>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Logging, reviewing, reporting</h3>
+								<div class="row">
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_8_Uploaded.png" alt="Build screenshot annotated beside its Figma frame with a logged issue in the sidebar" /></span>
+										<h4>Annotate and log</h4>
+										<p>Draw on the build screen while its Figma frame sits beside it, then log the issue with a severity from P1 to P4. <b>AI Check</b> can draft the findings instead of marking each one by hand.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_9_ReviewMode.png" alt="Dev review mode showing issues with In Progress and Resolved controls" /></span>
+										<h4>Review mode</h4>
+										<p>The developer opens a read-only link, reads each issue against the existing-versus-expected comparison, and flips it to <b>In Progress</b> or <b>Resolved</b>. No screenshot round-trip through ticket comments.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/DesignQA_10_Report.png" alt="Exported PDF design QA report with severity counts and per-issue comparison" /></span>
+										<h4>The exported report</h4>
+										<p>A PDF with the severity count up front, then per issue: the existing and expected screens, the priority, the description, and a link back to the Figma frame.</p>
+									</div>
+								</div>
+
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
 								<h2>Journey Map - The Process With the Tool</h2>
 								<p>After shipping the MVP I re-ran the same mapping exercise on the new flow, so before and after are directly comparable. The pass is now six stages, all inside one workspace.</p>
 								<span class="image fit"><img src="images/DesignQA_JourneyMap_WithTool.png" alt="Six-stage journey map of the design QA process using the tool, showing user actions, emotions, pain points and opportunities" /></span>
