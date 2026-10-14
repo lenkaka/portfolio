@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Projects - User Testing - Lenka Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Lenka Design</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="Projects.html" class="active">Project</a></li>
+						<li><a href="About.html">About</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">User Testing - Filter & Sorting</h1>
+
+							<section>
+								<span class="image fit"><img src="images/UsabilityTesting_FilterSorting_Cover.png" alt="" /></span>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h2>Background</h2>
+								<p>We have filter and sorting functions in the Lead Management feature since there is a long list of leads (potential customers) and existing customers, making it impractical for agents to manually search for the right person or prioritize follow-ups. 
+									These functions allow agents to quickly narrow down the list by criteria such as lead type, status, and sort by date added, or potential value. 
+									As a result, the agency can respond faster to high-priority leads, avoid missing renewal opportunities, and focus efforts on the most promising prospects without getting lost in an overwhelming list.
+								</p>
+								<p>In the current build, the filtering behaviour of the Lead Management module is not consistent across regions:</p>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h4>PH</h4>
+										<ul>
+											<li>Quick filter (Lead type) - Multiple selection</li>
+											<li>Filter panel - Multiple selection</li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h4>TKF / FIB</h4>
+										<ul>
+											<li>Quick filter (Lead type) - Single selection</li>
+											<li>Filter panel - Multiple selection</li>
+										</ul>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Existing problems</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/UsabilityTesting_FilterSorting_Problem_Sorting.gif" alt="" /></span>
+										<h4>Sorting</h4><ol>
+											<li>The arrow icon changes together with the text changed</li>
+											<li>It would be confused of what is the exact sequence of the list</li>
+										</ol>	
+									</div>
+
+									<div class="col-6 col-12-medium">
+										<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/UsabilityTesting_FilterSorting_Problem_Filter.gif" alt="" /></span>
+										<h4>Filter</h4>
+										<ol>
+											<li>There are 2 chips for the quick filter of individual leads and organization leads, it's single selection</li>
+											<li>There are the same filter options in the filter panel too when user taps the configure button. But it's multiple selection</li>
+											<li>The filter options are not consistent between the quick filter and the filter panel</li>
+											<li>There are other chips in the same screen but they are serve different functions. e.g. there is a defaul selected value on the upper and right ones, it's like a tab instead of filter </li>
+										</ol>	
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+
+								<div class="row">
+									<div class="col-3 col-12-medium">
+										<h3>Purpose</h3>
+									</div>
+									<div class="col-9 col-12-medium">
+										<p>Evaluate the usability of the current filtering function in the Lead Management module, using the existing build of the insurance agent app, with a focus on ease of use and clarity of the UI.</p>
+										<p>Come up with a better experience for the filtering function and make it more meaningful.</p>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<div class="row">
+									<div class="col-3 col-12-medium">
+										<h3>Research Questions</h3>
+									</div>
+									<div class="col-9 col-12-medium">
+										<ol>
+											<li>How do users usually search or filter the leads?</li>
+											<li>How do users use the filter in Lead Management?</li>
+											<li>How often do they use the filter?</li>
+											<li>Quick filter
+												<ol type="a">
+													<li>Do we need this?</li>
+													<li>Is it easy to use?</li>
+												</ol>
+											</li>
+											<li>Filter panel
+												<ol type="a">
+													<li>Is it easy to use?</li>
+													<li>Is it confusing to use the filter panel together with the quick filter?</li>
+													<li>Single selection or multiple selection?</li>
+												</ol>
+											</li>
+										</ol>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<div class="row">
+									<div class="col-3 col-12-medium">
+										<h3>My Role</h3>
+									</div>
+									<div class="col-9 col-12-medium">
+										<code>Designer (me) | Moderator | Observer & Coordinator</code>
+										<ul>
+											<li>Briefing, explaining and guiding  participants during the research process</li>
+											<li>Setting up the testing prototype, venue, observing participants, recording video and taking notes.</li>		
+										</ul>				
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+
+								<h2>Process</h2>
+								<span class="image fit"><img src="images/usabilitytesting_process.png" alt="" /></span>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+
+								<!-- ===== Preparation ===== -->
+								<h2>Preparation</h2>
+								<h3>Testing Material</h3>
+								<p>The test was run on the existing build of CUBE (iPad), focusing on the "All leads" list: the quick filter chips (Individual / Entity), the sorting, and the filter panel.</p>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h4>Leads list &amp; Quick filter</h4>
+										<p>Quick filter chips: Individual and Entity</p>
+										<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_filteringUT_Material_QuickFilter.jpg" alt="" /></span>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h4>Filter panel</h4>
+										<p>Lead type, Lead origin and Status</p>
+										<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_filteringUT_Material_FilterPanel.jpg" alt="" /></span>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+
+								<h3>Participants</h3>
+								<p>10 participants in total, in 2 types. The warm-up was prepared separately for each type.</p>
+								<ul>
+									<li><b>Insurance agents (2)</b> - real end users with 8 years of experience each</li>
+									<li><b>Non end users (8)</b> - colleagues with different roles
+										<ul>
+											<li>Digital team: P1 - PM, P2 - Designer, P3 &amp; P4 - Dev, P5 - Functional QA</li>
+											<li>P6 - Other team</li>
+											<li>P7 - Dev</li>
+											<li>P8 - IT support</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<i class="fas fa-user-tie"></i><code>Insurance agents</code>
+										<p>For real end users, the warm-up was a few questions to understand their experience first:</p>
+										<ol>
+											<li>Can you walk me through how you usually start your day with leads?</li>
+											<li>Normally how do you find the leads of different statuses that you want to follow up?</li>
+											<li>Do you usually filter your leads, or do you scroll and scan?</li>
+											<li>Which filters do you use most often?</li>
+											<li>Are there filters you avoid using? Why?</li>
+										</ol>
+									</div>
+									<div class="col-6 col-12-medium">
+										<i class="fas fa-user"></i><code>Non end users</code>
+										<p>Without the context of an agent's daily work, they were given a scenario to role-play before starting:</p>
+										<blockquote>For this session, please imagine you are an insurance agent working for an insurance company. Your main job today is to follow up on potential customers (called leads), understand their needs, and contact the right people at the right time. Let's focus on this part.</blockquote>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Testing Script</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h4>Quick filter</h4>
+										<ol>
+											<li>What will you do if you want to see individual leads?</li>
+											<li>What will you do if you want to see entity leads?</li>
+											<li>What will you do if you want to see the whole list?</li>
+										</ol>
+										<h5>Quick filter - Single selection</h5>
+										<ul><li>Is it clear to use?</li></ul>
+										<h5>Quick filter - Multiple selection</h5>
+										<ul><li>What do you think if these 2 buttons are both in focused state?</li></ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h4>Filter panel</h4>
+										<ol>
+											<li>If you want to follow up the leads that you've contacted before but haven't created a Sales Illustration yet, what will you do to filter the leads with Contacted status?</li>
+											<li>What do you expect to do in this panel?
+												<ol type="a">
+													<li>Multiple or single selection for each category?</li>
+													<li>If the lead type category is single selection, do you expect single or multiple selection on the other categories? Why?</li>
+												</ol>
+											</li>
+										</ol>
+									</div>
+								</div>
+								<h5>Probing questions</h5>
+								<ul>
+									<li>"What made you choose that option?"</li>
+									<li>"What were you expecting to see?"</li>
+									<li>"If this were your job, would this feel stressful or manageable?"</li>
+								</ul>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+
+								<!-- ===== Run the Sessions ===== -->
+								<h2>Run the Sessions</h2>
+								<h3>Flow &amp; Logistics</h3>
+								<div class="row">
+									<div class="col-4 col-12-medium">
+										<i class="far fa-smile"></i>
+										<h4>Warm-up</h4>
+										<ul><li>Role-play scenario for non end users</li><li>Experience questions for insurance agents</li></ul>
+									</div>
+									<div class="col-4 col-12-medium">
+										<i class="far fa-hand-point-up"></i>
+										<h4>Do the task</h4>
+										<ul><li>Quick filter tasks</li><li>Filter panel tasks</li></ul>
+									</div>
+									<div class="col-4 col-12-medium">
+										<i class="fas fa-question"></i>
+										<h4>Follow up questions</h4>
+										<ul><li>Single vs. multiple selection expectations</li><li>Probing questions on their choices</li></ul>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Input Data</h3>
+								<p>For each participant, I put together a profile card (for insurance agents) and a feedback &amp; observation board in FigJam, placing their quotes and observed behaviours next to the screens, together with photos from the session.</p>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<!-- ===== Analysis & Findings ===== -->
+								<h2>Analysis &amp; Findings</h2>
+								<h3>Insurance Agents</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<span class="image fit"><img src="images/CUBE_filteringUT_profileA.jpg" alt="" /></span>
+									</div>
+									<div class="col-6 col-12-medium">
+										<span class="image fit"><img src="images/CUBE_filteringUT_profileB.jpg" alt="" /></span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<p style="font-size: 0.85em; margin-bottom: 0.5em;"><b><i>Agent A - feedback &amp; observation</i></b></p>
+										<span class="image fit"><img src="images/CUBE_filteringUT_Feedback_A.jpg" alt="" /></span>
+									</div>
+									<div class="col-6 col-12-medium">
+										<p style="font-size: 0.85em; margin-bottom: 0.5em;"><b><i>Agent B - feedback &amp; observation</i></b></p>
+										<span class="image fit"><img src="images/CUBE_filteringUT_Feedback_B.jpg" alt="" /></span>
+									</div>
+								</div>
+								<h4>Key takeaways</h4>
+								<ol>
+									<li>Both agents barely track leads in the app - they use Google Calendar or Excel, and search by name rather than filtering</li>
+									<li>Opposite preferences: Agent A wants <b>multiple selection</b> everywhere to see both lead types with a status; Agent B wants <b>single selection</b> - one lead type at a time, and Contacted / Not contacted as either-or</li>
+									<li>Both expect lead type to behave the same in the quick filter and the filter panel</li>
+									<li>Agent B prioritises leads by his own ranking, and would like a ranking label in the list</li>
+								</ol>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+								<h3>Non End Users</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<p style="font-size: 0.85em; margin-bottom: 0.5em;"><b><i>Digital team (P1 - P5)</i></b></p>
+										<span class="image fit"><img src="images/CUBE_filteringUT_Feedback_P5.jpg" alt="" /></span>
+									</div>
+									<div class="col-6 col-12-medium">
+										<p style="font-size: 0.85em; margin-bottom: 0.5em;"><b><i>Other team (P6)</i></b></p>
+										<span class="image fit"><img src="images/CUBE_filteringUT_Feedback_P6.jpg" alt="" /></span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<p style="font-size: 0.85em; margin-bottom: 0.5em;"><b><i>Dev (P7)</i></b></p>
+										<span class="image fit"><img src="images/CUBE_filteringUT_Feedback_P7.jpg" alt="" /></span>
+									</div>
+									<div class="col-6 col-12-medium">
+										<p style="font-size: 0.85em; margin-bottom: 0.5em;"><b><i>IT support (P8)</i></b></p>
+										<span class="image fit"><img src="images/CUBE_filteringUT_Feedback_P8.jpg" alt="" /></span>
+									</div>
+								</div>
+								<h4>Key takeaways</h4>
+								<ol>
+									<li>The quick filter is easy to miss - P5 and P8 went to the filter panel or browsed the whole list instead</li>
+									<li>To view all, P6 and P8 tapped &quot;Entity&quot; while on Individual - they expected the quick filter to be multiple selection</li>
+									<li>Lead type in 2 places is confusing - P1, P6 and P8 want the same behaviour in both; P2, P4 and P7 question why it is in both places at all</li>
+									<li>Single selection needs an &quot;All&quot; option (P1, P3, P8), selected by default like the other chips on the screen</li>
+									<li>Multiple selection feels normal for the other categories in the panel, but it is not visually clear - P4 suggested captions for single / multiple selection</li>
+								</ol>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<!-- ===== Insights ===== -->
+								<h2>Insights</h2>
+								<span class="image fit"><img src="images/CUBE_filteringUT_insights.jpg" alt="" /></span>
+								<div class="row">
+									<div class="col-4 col-12-medium">
+										<h4>5 : 5</h4>
+										<p>Participants were split on single vs. multiple selection for the quick filter, but all 8 who answered chose multiple selection for the other categories in the filter panel.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<h4>Same look, different behaviour</h4>
+										<p>Tabs, switchers and filter chips - single and multiple selection - all share the same visual language, so users can't tell how they behave.</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<h4>No clear default</h4>
+										<p>Without an &quot;All&quot; option, the default state is unclear. 4 participants asked for an &quot;All&quot; option for single selection.</p>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<!-- ===== Draft Solutions ===== -->
+								<h2>Draft Solutions</h2>
+								<div class="row">
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/CUBE_filteringUT_Solution1.jpg" alt="" style="aspect-ratio: 2364 / 2136; object-fit: contain;" /></span>
+										<h4><i class="fas fa-check-square"></i> Solution 1 (Selected)</h4>
+										<p>All multiple selection</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/CUBE_filteringUT_Solution2.jpg" alt="" style="aspect-ratio: 2364 / 2136; object-fit: contain;" /></span>
+										<h4>Solution 2</h4>
+										<p>By meaning - multiple &amp; single selection</p>
+									</div>
+									<div class="col-4 col-12-medium">
+										<span class="image fit"><img src="images/CUBE_filteringUT_Solution3.jpg" alt="" style="aspect-ratio: 2364 / 2136; object-fit: contain;" /></span>
+										<h4>Solution 3</h4>
+										<p>Add &quot;All&quot; - single selection</p>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<!-- ===== Final Solution ===== -->
+								<h2>Final Solution</h2>
+								<span class="image fit"><img src="images/CUBE_filteringUT_Solution_Final.jpg" alt="" /></span>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h4>Quick filter</h4>
+										<ul>
+											<li>Multiple selection, to stay consistent with the behaviour of the filter panel</li>
+											<li>Consider using a different visual language for switchers / tabs and filtering chips</li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h4>Filter panel</h4>
+										<ul>
+											<li>Multiple selection for each category, giving users the flexibility to select one or several</li>
+											<li>If more types are added to the categories later, the same behaviour still applies</li>
+											<li>Consider using a different visual language for single / multiple selection</li>
+										</ul>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+					</section>
+
+					<!-- Coming soon text + separator -->
+					<div class="align-center" style="margin: 2em 0 1em 0;">
+						<hr />
+					</div>
+
+					<ul class="actions">
+						<li><a href="Projects.html" class="button primary">View My Projects  </a></li>
+					</ul>
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Lenka XIA 2022. All rights reserved.</li>
+						<ul class="icons">
+							<li><a href="https://www.behance.net/lenkaxiashuxin" target="_blank" class="icon brands fa-behance-square"><span class="label">Behance</span></a></li>
+							<li><a href="https://www.linkedin.com/in/lenkaxia/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+ 	</body>
+</html>
