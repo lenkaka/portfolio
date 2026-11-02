@@ -418,6 +418,61 @@
 									<li>As a moderator, avoid reacting to answers on the spot so participants aren't led</li>
 								</ul>
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+
+								<!-- ===== Outcome: Design Guideline ===== -->
+								<h2>Outcome - Design Guideline</h2>
+								<p>After the testing, I wrote the "Go to the field" control into the CUBE design guideline, so designers apply the same behaviour to every long form in the app, on both tablet and mobile.</p>
+								<ul class="actions">
+									<li><a href="Project_13_FWD_DG_Full.html" class="button">View the design guideline</a></li>
+								</ul>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h4>Case 1 - WITH highlighted fields</h4>
+										<p>Anchors the agent to the mandatory fields in a form.</p>
+										<h5><i class="fas fa-check-circle"></i> When to use</h5>
+										<ul>
+											<li>The form has some pre-filled fields (read mode or editable) mixed with mandatory fields</li>
+											<li>Always together with the highlight on the mandatory fields</li>
+										</ul>
+										<h5><i class="fas fa-times-circle"></i> When not to use</h5>
+										<ul>
+											<li>The form is blank</li>
+											<li>The form only has mandatory / optional fields</li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h4>Case 2 - WITHOUT highlighted fields</h4>
+										<p>Shows how many fields still need to be filled in.</p>
+										<h5><i class="fas fa-check-circle"></i> When to use</h5>
+										<ul>
+											<li>The form is blank</li>
+											<li>No highlight on the fields</li>
+										</ul>
+										<h5><i class="fas fa-times-circle"></i> When not to use</h5>
+										<ul>
+											<li>The form mixes read mode and edit mode</li>
+										</ul>
+									</div>
+								</div>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Applied in tablet eApp</h3>
+								<p>Tapping "Go to the field" highlights all the mandatory fields. The count goes down as each field is filled, and once all are cleared the control disappears and "Next" is enabled.</p>
+								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_eAppFNA_UT_DG_tablet_1.jpg" alt="Tablet eApp - tap Go to the field" /></span>
+								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_eAppFNA_UT_DG_tablet_2.jpg" alt="Tablet eApp - fill in fields until Next is enabled" /></span>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Applied in mobile eApp</h3>
+								<p>On the smaller screen, the page auto-scrolls and anchors to the incomplete fields one by one, highlighting the next one each time.</p>
+								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_eAppFNA_UT_DG_mobile.jpg" alt="Mobile eApp - Go to the field" /></span>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
+
+								<h3>Jumping between panels</h3>
+								<p>I also defined the edge cases when a form is split into collapsible panels: the count includes the newly opened panel, closing a panel keeps its fields counted, and "Go to the field" auto-expands the panel and anchors to the first blank mandatory field.</p>
+								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_eAppFNA_UT_DG_jump.jpg" alt="Behaviour for jumping between panels" /></span>
+								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 
 					</section>
 
