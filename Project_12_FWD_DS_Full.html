@@ -206,35 +206,43 @@
 								<p>&nbsp;</p> <p></p> <!-- Blank row -->
 								<h2 id="ai-modal">Rebuilding components with AI: Modal</h2>
 								<h3>Painpoints</h3>
-								<span class="image fit"><img src="images/CUBE_DS_AIModal_painpoints.jpg" alt="Which component do I trust? DS 2.0 or the guideline, thin guideline coverage, which country is the latest" /></span>
+								<h4>Which component do I trust?</h4>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_painpoints_v2.jpg" alt="Which component do I trust? Spread over 3 DS pages, DS and guideline disagree on widths, 100+ hand-built popups drifting" /></span>
 
 								<h3>The journey today</h3>
-								<span class="image fit"><img src="images/CUBE_DS_AIModal_journey.jpg" alt="Reusing a page means asking a person, then searching DS 2.0 and the design guideline" /></span>
+								<h4>Reusing a page means asking a person</h4>
+								<p>Scenario: IDN needs a page that already exists in MY TKF/FIB, with different text.</p>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_journey_v2.jpg" alt="Reusing a page means asking a person, then searching DS 2.0 and the design guideline" /></span>
 								<blockquote>Finding the right component means asking a person, then checking two sources.</blockquote>
 
 								<h3>Before - Dialog v1 in DS 2.0</h3>
-								<ol>
-									<li><b>Not arranged well</b> - building blocks and one-offs are mixed together</li>
-									<li><b>Too many variants</b> - a separate component for almost every case</li>
-									<li><b>Hard to set up</b> - variant properties are hard to choose between</li>
-								</ol>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_before.jpg" alt="The old component: 3 DS pages, 14 separate components, 748 instances of the CTA section in 58 files" /></span>
 								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_DS_AIModal_old_crop.jpg" alt="Dialog v1 in DS 2.0" /></span>
 
-								<h3>How AI helped - AI reads and builds, I review</h3>
-								<ol>
-									<li><b>Read & summarise</b> - AI read the DS 2.0 modals and the guidelines, then listed each type by scenario and the conflicts between them</li>
-									<li><b>Create, then I examine</b> - I briefed the structure: content and bottom CTA as slots. AI built it, and I fine-tuned the variants until they were easy to use, plus the usage guides</li>
-									<li><b>Rebuild the guideline</b> - AI snapshotted each guideline modal and rebuilt it with the published DS 2.0 component, keeping the same text. Special cases became variants or patterns</li>
-								</ol>
+								<h3>How AI helped</h3>
+								<p>Claude Code and GitHub Copilot work on the Figma files through MCP. AI does the reading and building; I make the decisions and check every step.</p>
+								<h4>1. AI reads and plans, I refine</h4>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_ai_plan.jpg" alt="Steps 1 to 4: connect AI to Figma, read the files, summarise and plan, check and refine the plan" /></span>
+								<p><i>Step 3 output: the conflicts AI found and the page plan it proposed</i></p>
 								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_DS_AIModal_ai_summary.jpg" alt="AI summary of modal types and conflicts" /></span>
+								<h4>2. AI builds, I examine</h4>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_ai_build.jpg" alt="Steps 5 to 7: build and examine, fine-tune and check, confirm and sync, with safety checks for step 7" /></span>
+								<blockquote>Saved as a reusable skill, so the same steps can be used for the Web DS next.</blockquote>
+
+								<h3>The new component - Dialog</h3>
+								<h4>Slots and toggles, one component</h4>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_anatomy.jpg" alt="Anatomy: close row, title, content slot, CTA slot and footer slot; why it is called Dialog" /></span>
 
 								<h3>After - One component, two slots</h3>
-								<h4>Tablet</h4>
+								<h4>Tablet - 16 variants</h4>
+								<p>Size S 380 · M 572 · L 762 · XL 952 × Bottom CTA 0 · 1 · 2 horizontal · 2 vertical</p>
 								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_DS_AIModal_new_tablet.jpg" alt="New Dialog component - Tablet" /></span>
-								<h4>Mobile</h4>
+								<h4>Mobile - 8 variants</h4>
+								<p>Portrait 343 · Landscape 716 × Bottom CTA 0 · 1 · 2 horizontal · 2 vertical</p>
 								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_DS_AIModal_new_mobile.jpg" alt="New Dialog component - Mobile" /></span>
 
 								<h4>Doc & patterns</h4>
+								<p>Special cases are patterns, not new components: Dialog plus reusable content blocks (Graphic, Error details, Read progress, Ref no., Countdown).</p>
 								<div class="row">
 									<div class="col-6 col-12-medium">
 										<p><i>Sizing and layout spec</i></p>
@@ -249,17 +257,16 @@
 								<span class="image fit" style="border: 1px solid #d3d3d3;"><img src="images/CUBE_DS_AIModal_patterns_tablet.jpg" alt="Dialog patterns - Tablet" /></span>
 
 								<h3>Outcome</h3>
-								<span class="image fit"><img src="images/CUBE_DS_AIModal_outcome.jpg" alt="One modal, two ways in: pick up the component from DS 2.0, or start from a matching scenario in the guideline" /></span>
+								<h4>One Dialog, two ways in</h4>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_outcome_v2.jpg" alt="One Dialog, two ways in: 3 to 1 DS page, 14 to 2 components, 0 to about 99 guideline popups linked to the library" /></span>
 								<blockquote>Same component in both places, so they can no longer disagree.</blockquote>
 								<ul class="actions">
 									<li><a href="Project_13_FWD_DG_Full.html#ai-modal" class="button">See it in the design guideline</a></li>
 								</ul>
 
 								<h3>Next steps</h3>
-								<ol>
-									<li><b>Usability test</b> - is the variant setup easy for designers to use?</li>
-									<li><b>Replace every modal</b> - swap the modals in all working files to the DS 2.0 component, keeping the actual values</li>
-								</ol>
+								<h4>Test it, roll it out, reuse the process</h4>
+								<span class="image fit"><img src="images/CUBE_DS_AIModal_next_steps.jpg" alt="Next steps: usability test, replace every dialog, Web DS next; old components still in use; open DS gaps" /></span>
 
 
 
